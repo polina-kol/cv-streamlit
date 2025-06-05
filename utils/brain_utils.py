@@ -1,10 +1,15 @@
 import torch
 import torchvision.transforms as transforms
+from torchvision.models import efficientnet_b0
 from PIL import Image
 from ultralytics import YOLO
 
-# Загрузка классификационной модели EfficientNet-B0
-classification_model = torch.load("models/classifier.pth", map_location="cpu")
+# Создание классификационной модели EfficientNet-B0
+classification_model = efficientnet_b0(pretrained=False, num_classes=3)
+
+# Загрузка state_dict из .pth файла
+state_dict = torch.load("models/classifier.pth", map_location="cpu")
+classification_model.load_state_dict(state_dict)
 classification_model.eval()
 
 # YOLOv5s модели по срезам
