@@ -52,7 +52,7 @@ with tab2:
 
     with st.expander("📊 Sagittal — Метрики и описание датасета"):
         st.image("assets/data_sag.png", caption="Data — Sagittal")
-        st.image("assets/yolo_sagittal_confusion_matrix.png", caption="Confusion Matrix — Sagittal")
+        st.image("assets/conf_sag.png", caption="Confusion Matrix — Sagittal")
         st.image("assets/pr_sag.png", caption="PR Curve — Sagittal")
 
     with st.expander("📊 Coronal — Метрики и описание датасета"):
