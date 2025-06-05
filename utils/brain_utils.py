@@ -4,14 +4,14 @@ from PIL import Image
 from ultralytics import YOLO
 
 # Загрузка классификационной модели EfficientNet-B0
-classification_model = torch.load("models/classifier.pt", map_location="cpu")
+classification_model = torch.load("../models/classifier.pt", map_location="cpu")
 classification_model.eval()
 
 # YOLOv5s модели по срезам
 yolo_models = {
-    "axial": YOLO("models/yolo_axial.pt"),
-    "sagittal": YOLO("models/yolo_sag.pt"),
-    "coronal": YOLO("models/yolo_coronal.pt"),
+    "axial": YOLO("../models/yolo_axial.pt"),
+    "sagittal": YOLO("../models/yolo_sag.pt"),
+    "coronal": YOLO("../models/yolo_coronal.pt"),
 }
 
 # Преобразование для классификации
