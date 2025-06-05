@@ -2,10 +2,11 @@ streamlit
 torch
 torchvision
 timm
-opencv-python
+opencv-python-headless
 Pillow
 requests
 numpy
 matplotlib
 scikit-learn
 ultralytics
+efficientnet_pytorch
